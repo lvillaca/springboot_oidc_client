@@ -16,8 +16,6 @@ public class KeycloakAuthoritiesExtractor
     public List<GrantedAuthority> extractAuthorities
       (Map<String, Object> map) {
 
-	System.out.println("roles map:"+map);
-
         if (Objects.nonNull(map.get("roles"))) {
             return AuthorityUtils.commaSeparatedStringToAuthorityList( ((String)String.join(",",(List<String>)map.get("roles"))) );
         }
