@@ -8,7 +8,6 @@ public class KeycloakPrincipalExtractor
  
     @Override
     public Object extractPrincipal(Map<String, Object> map) {
-	System.out.println("Principal at map:"+map);
         return map.get("preferred_username");
     }
 }
