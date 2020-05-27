@@ -2,7 +2,7 @@ This is an example of a SpringBoot OIDC (OpenID Connect) client, configured via 
 
 It also simplifies the building process of a Docker container image, and can also dispatch a running container.
 
-This example was created based on Oauth2 configuration for SpringBoot from https://github.com/vdenotaris/spring-boot-security-saml-sample
+This example was created based on Oauth2 configuration for SpringBoot from https://docs.spring.io/spring-security-oauth2-boot/docs/2.0.0.RC2/reference/htmlsingle/ 
 
 
 The following are usage instructions:
