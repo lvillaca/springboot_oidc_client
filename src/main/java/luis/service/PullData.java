@@ -41,8 +41,6 @@ public class PullData {
         Authentication authentication = oAuth2Authentication.getUserAuthentication();
         Map<String, Object> details = (Map<String, Object>) authentication.getDetails();
 
-        StringBuilder appender = new StringBuilder();
-
         return details;
    }
   

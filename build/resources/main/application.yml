@@ -1,0 +1,45 @@
+server:
+  port: 8999
+  ssl:
+    key-store-type: JKS
+    key-store: classpath:/certs/service_provider.jks
+    key-store-password: service_provider_passwd
+    key-alias: service_provider_alias
+  session:
+    timeout: 900
+
+security:
+  oauth2:
+    client:
+      clientId: yourclientid
+      clientSecret: yoursecret
+      scope: openid
+      accessTokenUri: https://youridp/auth/realms/REALM/protocol/openid-connect/token
+      logoutUri: https://youridp/auth/realms/REALM/protocol/openid-connect/logout
+      userAuthorizationUri: https://youridp/auth/realms/REALM/protocol/openid-connect/auth
+    resource:
+      userInfoUri: https://youridp/auth/realms/REALM/protocol/openid-connect/userinfo
+  application:
+    name: dashboard
+  require-ssl: true
+
+ribbon:
+  ServerListRefreshInterval: 1000
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+
+logging:
+  level:
+    org.springframework.web: ERROR
+    luis: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+
